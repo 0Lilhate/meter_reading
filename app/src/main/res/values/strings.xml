@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">my_movie_app</string>
+    <string name="crate_account">Создать аккаунт</string>
+    <string name="name">Имя</string>
+    <string name="email">Email</string>
+    <string name="pass">Пароль</string>
+    <string name="crate">Создать</string>
+    <string name="haveAcc">Уже есть аккаунт? Войдите</string>
+    <string name="notHaveAcc">Нет аккаунта? Создайте его сейчас</string>
+    <string name="entry">Вход</string>
+    <string name="to_come">Войти</string>
+    <string name="number_flat">Номер квартиры</string>
+    <string name="view_meter_readings">Посмотреть показания счетчиков</string>
+    <string name="add_readings">Добавить показания</string>
 </resources>
