@@ -12,4 +12,8 @@
     <string name="number_flat">Номер квартиры</string>
     <string name="view_meter_readings">Посмотреть показания счетчиков</string>
     <string name="add_readings">Добавить показания</string>
+    <string name="electricity">Электричество</string>
+    <string name="XBC">ХВС</string>
+    <string name="GBC">ГВС</string>
+    <string name="Gas">Газ</string>
 </resources>

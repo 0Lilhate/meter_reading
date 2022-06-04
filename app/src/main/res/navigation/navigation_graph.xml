@@ -8,7 +8,20 @@
     <fragment
         android:id="@+id/fragmentMain"
         tools:layout="@layout/main_fragment"
-        android:name="com.example.my_movie_app.Fragment.MainFragment"/>
+        android:name="com.example.my_movie_app.Fragment.MainFragment">
+        <action
+            android:id="@+id/action_fragmentMain_to_add_readings"
+            app:destination="@id/add_readings" />
+        <action
+            android:id="@+id/action_fragmentMain_to_add_note"
+            app:destination="@id/add_note" />
+    </fragment>
 
-    <fragment android:id="@+id/placeholder2" />
+    <fragment android:id="@+id/add_readings"
+        tools:layout="@layout/fragment_add_readings"
+        android:name="com.example.my_movie_app.Fragment.AddReadingsFragment"/>
+
+    <fragment android:id="@+id/add_note"
+        tools:layout="@layout/add_note"
+        android:name="com.example.my_movie_app.Fragment.AddNote"/>
 </navigation>

@@ -11,4 +11,5 @@
     <color name="backgroundColor">#0001FC</color>
     <color name="my_white">#EFF5FB</color>
     <color name="blue">#0001FC</color>
+    <color name="grey">#757575</color>
 </resources>
