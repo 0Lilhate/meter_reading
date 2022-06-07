@@ -10,18 +10,26 @@
         tools:layout="@layout/main_fragment"
         android:name="com.example.my_movie_app.Fragment.MainFragment">
         <action
-            android:id="@+id/action_fragmentMain_to_add_readings"
-            app:destination="@id/add_readings" />
-        <action
             android:id="@+id/action_fragmentMain_to_add_note"
             app:destination="@id/add_note" />
+        <action
+            android:id="@+id/action_fragmentMain_to_admin_layout_fragment"
+            app:destination="@id/admin_layout_fragment" />
     </fragment>
-
-    <fragment android:id="@+id/add_readings"
-        tools:layout="@layout/fragment_add_readings"
-        android:name="com.example.my_movie_app.Fragment.AddReadingsFragment"/>
 
     <fragment android:id="@+id/add_note"
         tools:layout="@layout/add_note"
-        android:name="com.example.my_movie_app.Fragment.AddNote"/>
+        android:name="com.example.my_movie_app.Fragment.AddNote">
+        <action
+            android:id="@+id/action_add_note_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+    </fragment>
+
+    <fragment android:id="@+id/admin_layout_fragment"
+        tools:layout="@layout/admin_layout_main"
+        android:name="com.example.my_movie_app.Fragment.AdminFragment">
+        <action
+            android:id="@+id/action_admin_layout_fragment_to_fragmentMain"
+            app:destination="@id/fragmentMain" />
+    </fragment>
 </navigation>

@@ -116,6 +116,20 @@
         android:textColor="@color/textColorBtn" />
 
     <TextView
+        android:id="@+id/admin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/haveRegist"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:onClick="ClickText"
+        android:text="@string/login_as_administrator"
+        android:textAppearance="@style/next" />
+
+    <TextView
         android:id="@+id/skip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

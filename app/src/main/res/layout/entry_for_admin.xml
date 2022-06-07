@@ -14,9 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal = "true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="71dp"
-        android:text="@string/crate_account"
+        android:text="@string/entry_admin"
         android:textAppearance="@style/text_entrance" />
 
     <LinearLayout
@@ -26,15 +26,15 @@
         android:layout_below="@id/tvCreateAcc"
         android:layout_gravity="center"
         android:layout_marginStart="48sp"
-        android:layout_marginTop="121dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="48sp"
 
-        android:orientation="vertical">
+        android:orientation="vertical">>
 
         <LinearLayout
-            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/email"
             android:layout_marginBottom="20sp"
             android:orientation="vertical">
 
@@ -43,18 +43,17 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/inputForm"
-                android:text="@string/number_flat" />
+                android:text="@string/fio"
+                android:textAppearance="@style/inputForm" />
 
             <EditText
-
+                android:id="@+id/enter_fio"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/number_flat"
-                android:paddingLeft="15dp"
-                android:textColorHint="@color/white"
                 android:background="@drawable/edit_text_style"
-                android:inputType="number"/>
+                android:hint="@string/fio"
+                android:paddingLeft="15dp"
+                android:textColorHint="@color/white" />
 
         </LinearLayout>
 
@@ -72,24 +71,25 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/email"
                 android:textAppearance="@style/inputForm"
-                android:textColorHint="#FFFFFF"
-                android:text="@string/email" />
+                android:textColorHint="#FFFFFF" />
 
             <EditText
+                android:id="@+id/enter_email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/edit_text_style"
                 android:hint="@string/email"
                 android:paddingLeft="15dp"
-                android:textColorHint="@color/white"
-                android:background="@drawable/edit_text_style" />
+                android:textColorHint="@color/white" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/email"
+
             android:layout_marginBottom="20sp"
             android:orientation="vertical">
 
@@ -98,65 +98,52 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="@style/inputForm"
-                android:text="@string/pass" />
+                android:text="@string/pass"
+                android:textAppearance="@style/inputForm" />
 
             <EditText
+                android:id="@+id/enter_pass"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@drawable/edit_text_style"
                 android:hint="@string/pass"
-                android:textColorHint="@color/white"
                 android:paddingLeft="15dp"
-                android:background="@drawable/edit_text_style" />
+                android:textColorHint="@color/white" />
+
 
         </LinearLayout>
-
     </LinearLayout>
 
     <Button
 
-        android:id="@+id/create"
+        android:id="@+id/entry_admin"
+        style="@style/buttonText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/input_data"
         android:layout_gravity="center"
         android:layout_marginLeft="30sp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="31dp"
         android:layout_marginRight="30sp"
-        style="@style/buttonText"
-        android:text="@string/crate"
-        android:textAllCaps="false"
-        android:background="@drawable/my_button"/>
+        android:background="@drawable/my_button"
+        android:text="@string/to_come"
+        android:textAllCaps="false" />
+
+
+
 
     <TextView
-        android:id="@+id/haveAcc"
+        android:id="@+id/back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/create"
-        android:layout_marginTop="20sp"
-        android:clickable="true"
-        android:gravity="center"
-        android:onClick="ClickText"
-        android:text="@string/haveAcc"
-        android:textAppearance="@style/next"
-        android:textColor="@color/textColorBtn" />
-
-
-
-    <TextView
-        android:id="@+id/skip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
         android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
+
+
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:gravity="center"
         android:onClick="ClickText"
-        android:text="Пропустить"
+        android:text="@string/come_back"
         android:textAppearance="@style/next" />
-
-
 
 </RelativeLayout>

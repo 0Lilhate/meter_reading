@@ -2,76 +2,91 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_gravity="center"
-    android:layout_margin="50dp">
 
+    android:background="@color/white">
 
-    <EditText
-        android:id="@+id/electricity_ET"
-        style="@style/editText"
-
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:textColor="@color/grey"
-        tools:ignore="LabelFor"
+        app:layout_constraintTop_toTopOf="parent">
 
-        android:hint="@string/electricity"/>
+        <EditText
+            android:id="@+id/electricity_ET"
+            style="@style/editText"
 
-    <EditText
-        android:id="@+id/XBC_ET"
+            android:hint="@string/electricity"
+            android:textColor="@color/grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
 
-        style="@style/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/electricity_ET"
-        android:textColor="@color/grey"
-        tools:ignore="LabelFor"
+            tools:ignore="LabelFor" />
 
-        android:hint="@string/XBC"/>
-    <EditText
-        android:id="@+id/gas_ET"
-        style="@style/editText"
+        <EditText
+            android:id="@+id/XBC_ET"
 
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/GBC_ET"
-        android:textColor="@color/grey"
-        tools:ignore="LabelFor"
+            style="@style/editText"
+            android:hint="@string/XBC"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/electricity_ET"
 
-        android:hint="@string/Gas"/>
+            tools:ignore="LabelFor" />
 
-    <EditText
-        android:id="@+id/GBC_ET"
+        <EditText
+            android:id="@+id/gas_ET"
+            style="@style/editText"
 
-        style="@style/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/XBC_ET"
-        android:textColor="@color/grey"
-        tools:ignore="LabelFor"
+            android:hint="@string/Gas"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/GBC_ET"
 
-        android:hint="@string/GBC"/>
+            tools:ignore="LabelFor" />
+
+        <EditText
+            android:id="@+id/GBC_ET"
+
+            style="@style/editText"
+            android:hint="@string/GBC"
+            android:textColor="@color/grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/XBC_ET"
+
+            tools:ignore="LabelFor" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonOk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button"
+            android:text="Ok"
+            android:textColor="@color/black"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gas_ET" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonOk"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button"
-        android:text="Ok"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gas_ET"
-
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginTop="10dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

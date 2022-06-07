@@ -15,8 +15,10 @@ class NoteAdapter(private val noteList: List<NoteData>): RecyclerView.Adapter<No
 
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val name_txt: TextView = itemView.findViewById(R.id.item_note_name)
-        val text: TextView = itemView.findViewById(R.id.item_note_text)
+        val Electricity_TV: TextView = itemView.findViewById(R.id.electricity_TV)
+        val XBC_TV: TextView = itemView.findViewById(R.id.XBC_TV)
+        val GBC_TV: TextView = itemView.findViewById(R.id.GBC_TV)
+        val gas_TV: TextView = itemView.findViewById(R.id.gas_TV)
 
     }
 
@@ -26,8 +28,8 @@ class NoteAdapter(private val noteList: List<NoteData>): RecyclerView.Adapter<No
     }
 
     override fun onBindViewHolder(p0: MyViewHolder, p1: Int) {
-        p0.name_txt.text = noteList[p1].getElectricity()
-        p0.text.text = noteList[p1].getGAS()
+        p0.Electricity_TV.text = noteList[p1].electricity
+        p0.XBC_TV.text = noteList[p1].GAS
 
     }
 

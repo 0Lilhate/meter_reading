@@ -13,6 +13,7 @@ class CreateAccount: AppCompatActivity() {
     private var haveAcc: TextView? = null
     private var skip: TextView? = null
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.create_account)
@@ -20,6 +21,7 @@ class CreateAccount: AppCompatActivity() {
         create = findViewById(R.id.create)
         haveAcc = findViewById(R.id.haveAcc)
         skip = findViewById(R.id.skip)
+
 
         haveAcc?.setOnClickListener{
             val EntryIntent = Intent(this, Entry::class.java)
