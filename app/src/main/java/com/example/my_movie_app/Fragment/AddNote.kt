@@ -80,10 +80,13 @@ class AddNote : Fragment() {
 
                 mViewModel.addNode(NoteData(id = 1, electricity = _electricity, XBC = _xbc, GBC = _GBC, GAS = _Gas ))
 
-                ft = parentFragmentManager.beginTransaction()
-                ft.replace(R.id.nav_host_fragment_content_main, MainFragment())
-                ft.addToBackStack(null)
-                ft.commit()
+//                ft = parentFragmentManager.beginTransaction()
+//                ft.replace(R.id.nav_host_fragment_content_main, MainFragment())
+//                ft.addToBackStack(null)
+//                ft.commit()
+
+                val navController = Navigation.findNavController(myView.context as Activity,R.id.nav_host_fragment_content_main)
+                navController.navigate(R.id.action_add_note_to_fragmentMain)
 
 
             }

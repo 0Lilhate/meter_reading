@@ -65,7 +65,6 @@ class MainFragment: Fragment() {
             val navController = Navigation.findNavController(myView.context as Activity,R.id.nav_host_fragment_content_main)
             navController.navigate(R.id.action_fragmentMain_to_add_note)
 
-
         }
     }
 
