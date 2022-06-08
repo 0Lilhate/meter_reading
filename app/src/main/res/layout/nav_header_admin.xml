@@ -36,7 +36,7 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:gravity="end"
-            android:text="Сотников Даниил Николаевич" />
+            android:text="Артем Борискин" />
 
         <TextView
 

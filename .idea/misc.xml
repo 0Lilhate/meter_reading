@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/D/Android/Clone/meter_reading/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
+        <entry key="..\:/D/Android/Clone/meter_reading/app/src/main/res/layout/app_bar_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/D/Android/Clone/meter_reading/app/src/main/res/layout/content_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/D/Android/Clone/meter_reading/app/src/main/res/layout/nav_header_admin.xml" value="0.22826086956521738" />
+        <entry key="..\:/D/Android/Clone/meter_reading/app/src/main/res/layout/nav_header_main.xml" value="0.22826086956521738" />
         <entry key="..\:/D/Android/Not_my_project/app/src/main/res/drawable/button.xml" value="0.157" />
         <entry key="..\:/D/Android/Not_my_project/app/src/main/res/drawable/edit_text_style.xml" value="0.1555" />
         <entry key="..\:/D/Android/Not_my_project/app/src/main/res/drawable/ic_add.xml" value="0.1555" />

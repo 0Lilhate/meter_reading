@@ -62,7 +62,7 @@ class MainActivityForAdmin: AppCompatActivity() {
 
         var admin_email: TextView = header.findViewById(R.id.admin_email)
         var fio_TV: TextView = header.findViewById(R.id.fio_TV)
-        admin_email.setText("Daniil@gmail.com")
+        admin_email.setText("boriskin.art@yandex.ru")
 
 
 

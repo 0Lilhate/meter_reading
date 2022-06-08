@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(){
         var header: View = navView.getHeaderView(0)
         //тут происходит изменение header в navigationView
         var tx1:TextView = header.findViewById(R.id.email)
-        tx1.setText("Daniil@gmail.com")
+        tx1.setText("boriskin.art@yandex.r")
 
 
     }
