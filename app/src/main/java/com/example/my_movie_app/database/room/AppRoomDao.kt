@@ -6,14 +6,14 @@ import com.example.my_movie_app.data.NoteData
 
 @Dao
 interface AppRoomDao {
-    @Query("SELECT *from note_tables")
+    @Query("SELECT * FROM note_tables")
     fun getAllNotes(): LiveData<List<NoteData>>
 
     //в случае, если будут какие то конфликты, то мы будем игнорировать эту операцию
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(vararg note: NoteData)
 
-    @Delete
+    @Query("DELETE FROM note_tables")
     suspend fun delete(note: NoteData)
 
     @Update

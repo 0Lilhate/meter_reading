@@ -7,26 +7,40 @@ import androidx.room.RoomDatabase
 import com.example.my_movie_app.data.NoteData
 
 
-@Database(entities = [NoteData::class], version = 1)
+@Database(version = 1, entities = [NoteData::class], exportSchema = false)
 abstract class AppRoomDatabase : RoomDatabase() {
     abstract fun getAppRoomDao(): AppRoomDao
 
-    //привет синглтон, давно не виделись
-    companion object {
+    companion object{
+        @Volatile
+        private var INSTANCE: AppRoomDatabase? = null
 
-        @Volatile //означает, что база данных не должна кэшироватсья
-        private var database: AppRoomDatabase? = null
-
-        @Synchronized //запрещаем обращаться к функции нескольким экземплярам класса одновременно
-        fun getInstance(context: Context): AppRoomDatabase {
-            return if (database == null) {
-                database = Room.databaseBuilder(
-                    context,
+        fun getDatabase(context: Context): AppRoomDatabase {
+            // if the INSTANCE is not null, then return it,
+            // if it is, then create the database
+            var tempInstance = INSTANCE
+            if (tempInstance != null){
+                return tempInstance
+            }
+            synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
                     AppRoomDatabase::class.java,
-                    "note_tables"
+                    "word_database"
                 ).build()
-                database as AppRoomDatabase
-            } else database as AppRoomDatabase
+                INSTANCE = instance
+                // return instance
+                return instance
+            }
         }
+
+
+
+
     }
+
+
+
+
+
 }
