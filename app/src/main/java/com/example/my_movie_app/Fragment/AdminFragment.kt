@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.my_movie_app.Adapter.NoteAdapter
@@ -23,6 +24,7 @@ class AdminFragment: Fragment(), MaterialSearchBar.OnSearchActionListener {
     private var searchList: MutableList<NoteData> = mutableListOf()
     private lateinit var recyclerView: RecyclerView
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,9 +39,6 @@ class AdminFragment: Fragment(), MaterialSearchBar.OnSearchActionListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
-
 
     }
 
@@ -97,7 +96,7 @@ class AdminFragment: Fragment(), MaterialSearchBar.OnSearchActionListener {
         Toast.makeText(myView.context, text, Toast.LENGTH_SHORT).show()
         fillList(text.toString())
         recyclerView.layoutManager = LinearLayoutManager(myView.context)
-        recyclerView.adapter = NoteAdapter(searchList)
+        //recyclerView.adapter = NoteAdapter((searchList)
 
 
 

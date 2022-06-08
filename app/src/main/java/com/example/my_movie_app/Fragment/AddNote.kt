@@ -1,20 +1,25 @@
 package com.example.my_movie_app.Fragment
-
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
+
 
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+
 
 import com.example.my_movie_app.R
 import com.example.my_movie_app.data.NoteData
 import com.example.my_movie_app.database.DataViewModel
 import com.google.android.material.snackbar.Snackbar
+
 
 
 class AddNote : Fragment() {
@@ -25,6 +30,7 @@ class AddNote : Fragment() {
     private lateinit var Gas: EditText
     private lateinit var myView:View
     private lateinit var mViewModel: DataViewModel
+    private lateinit var ft: FragmentTransaction
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -48,7 +54,7 @@ class AddNote : Fragment() {
     }
 
     private fun initFields() {
-        mViewModel = ViewModelProvider(this).get(DataViewModel::class.java)
+
 
         electricity = myView.findViewById(R.id.electricity_ET)
         xbc = myView.findViewById(R.id.XBC_ET)
@@ -63,13 +69,23 @@ class AddNote : Fragment() {
 
 
         OkButton.setOnClickListener {
-            if (!_electricity.equals("") and !_xbc.equals("") and !_GBC.equals("") and _Gas.equals("")){
-                Snackbar.make(myView, "Nice", Snackbar.LENGTH_LONG)
+            if (true){
+                Snackbar.make(myView, "!!", Snackbar.LENGTH_LONG)
                     .setAction("Action", null)
                     .show()
 
+                mViewModel = ViewModelProvider(this).get(DataViewModel::class.java)
                 //Здесь ошибка
+
+
                 mViewModel.addNode(NoteData(id = 1, electricity = _electricity, XBC = _xbc, GBC = _GBC, GAS = _Gas ))
+
+                ft = parentFragmentManager.beginTransaction()
+                ft.replace(R.id.nav_host_fragment_content_main, MainFragment())
+                ft.addToBackStack(null)
+                ft.commit()
+
+
             }
             else{
                 Snackbar.make(myView, "Error", Snackbar.LENGTH_LONG)

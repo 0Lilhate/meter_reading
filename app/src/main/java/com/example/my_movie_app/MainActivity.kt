@@ -107,6 +107,7 @@ class MainActivity : AppCompatActivity(){
         navView.setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.nav_home -> {
+
                     toolbar?.setTitle("Показания счетчиков")
                     Toast.makeText(this, "My Profile", Toast.LENGTH_SHORT).show()
                     ft = supportFragmentManager.beginTransaction()

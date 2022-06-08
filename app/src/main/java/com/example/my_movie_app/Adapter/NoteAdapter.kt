@@ -5,13 +5,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.RecyclerView
+import com.example.my_movie_app.Fragment.MainFragment
 import com.example.my_movie_app.R
 import com.example.my_movie_app.data.NoteData
 
-class NoteAdapter(private val noteList: List<NoteData>): RecyclerView.Adapter<NoteAdapter.MyViewHolder>() {
+class NoteAdapter(): RecyclerView.Adapter<NoteAdapter.MyViewHolder>() {
 
-
+    private var mListNotes = emptyList<NoteData>()
 
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -28,12 +30,30 @@ class NoteAdapter(private val noteList: List<NoteData>): RecyclerView.Adapter<No
     }
 
     override fun onBindViewHolder(p0: MyViewHolder, p1: Int) {
-        p0.Electricity_TV.text = noteList[p1].electricity
-        p0.XBC_TV.text = noteList[p1].GAS
+        p0.Electricity_TV.text = mListNotes[p1].electricity
+        p0.XBC_TV.text = mListNotes[p1].XBC
+        p0.GBC_TV.text = mListNotes[p1].GBC
+        p0.gas_TV.text = mListNotes[p1].GAS
 
     }
 
     override fun getItemCount(): Int {
-        return noteList.size
+        return mListNotes.size
+    }
+
+    fun setList(list: List<NoteData>){
+        mListNotes = list
+        notifyDataSetChanged() //обновляем адаптер
+    }
+
+    override fun onViewAttachedToWindow(holder: MyViewHolder) {
+        holder.itemView.setOnClickListener{
+           // MainFragment.click(mListNotes[holder.adapterPosition])
+        }
+    }
+
+    override fun onViewDetachedFromWindow(holder: MyViewHolder) {
+        holder.itemView.setOnClickListener(null)
+        super.onViewDetachedFromWindow(holder)
     }
 }

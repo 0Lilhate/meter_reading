@@ -29,7 +29,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginEnd="48sp"
 
-        android:orientation="vertical">>
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -128,8 +128,6 @@
         android:background="@drawable/my_button"
         android:text="@string/to_come"
         android:textAllCaps="false" />
-
-
 
 
     <TextView

@@ -13,8 +13,8 @@ interface AppRoomDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(vararg note: NoteData)
 
-    @Query("DELETE FROM note_tables")
-    suspend fun delete(note: NoteData)
+    @Delete()
+    suspend fun delete(vararg note: NoteData)
 
     @Update
     fun updateTodo(vararg todos: NoteData)
